@@ -86,13 +86,6 @@ module.exports = {
           '^/api': ''
         }
       },
-      '/prod-api': {
-        target: 'http://127.0.0.1:8888/api/private/v1/',
-        changeOrigin: true,
-        pathRewrite: {
-          '^/api': ''
-        }
-      }
     },
     client: {
       overlay: false // 关闭error overlay
