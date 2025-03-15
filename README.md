@@ -76,14 +76,6 @@ npm run build
 yarn build
 ```
 
-### 部署说明
-
-构建完成后，生成的`dist`目录需要部署到Web服务器上。注意以下几点：
-
-1. 确保前端API路径配置正确
-2. 如使用history路由模式，需配置服务器将所有请求重定向到index.html
-3. 建议使用Nginx等Web服务器部署静态资源
-
 ## 环境变量配置
 
 ### 开发环境 (.env.development)
@@ -112,28 +104,32 @@ VUE_APP_BASE_API="http://127.0.0.1:8888/api/private/v1/"
 
 ### API请求失败
 
-- 检查API地址配置是否正确
-- 确认开发环境代理配置正确
-- 生产环境确保API地址可访问
+如果遇到API请求失败的情况，请先转入[Vue_api_server](https://github.com/JulianChu00/Vue_api_server)后端服务器项目并完成以下步骤：
 
-### 页面空白
+1. 克隆后端API服务器仓库
+```bash
+git clone https://github.com/JulianChu00/Vue_api_server.git
+```
 
-- 检查路由配置
-- 确认权限是否正确设置
-- 查看控制台是否有错误信息
+2. 安装依赖
+```bash
+cd Vue_api_server
+npm install
+```
+
+3. 启动开发服务器
+```bash
+node app.js
+```
+
+4. 确认API服务器正常运行后再重新访问前端应用
+
 
 ## 浏览器兼容性
 
 - 现代浏览器和Internet Explorer 11+
 - 推荐使用Chrome, Firefox, Safari
 
-## 贡献指南
-
-1. Fork本仓库
-2. 创建特性分支 (`git checkout -b feature/amazing-feature`)
-3. 提交更改 (`git commit -m 'Add some amazing feature'`)
-4. 推送到分支 (`git push origin feature/amazing-feature`)
-5. 提交Pull Request
 
 ## 许可证
 
